@@ -1,5 +1,7 @@
 package Exercise1;
 
+import javax.swing.*;
+
 public class Patient {
 
     private  String firstName;
@@ -78,14 +80,24 @@ public class Patient {
 
    public void  getPatientInfo()
    {
-       System.out.printf("Welcome to Patients directory");
-       System.out.printf("Patient Id is:" + getPatientId());
-       System.out.printf("Patient First Name is:" + getFirstName());
-       System.out.printf("Patient Last Name is:" + getLastName());
-       System.out.printf("Patient Address is:" + getAddress());
-       System.out.printf("Patient City is:" + getCity());
-       System.out.printf("Patient Province is:" + getProvince());
-       System.out.printf("Patient Postal Code is:" + getPostalCode());
+       String message="<html>Welcome!!! Patient information is as follows "+"<br>"
+               +"Patient Id: " + getPatientId() + "<br>"
+                +"First Name: "+getFirstName()+
+                "<br>"
+               +"Last Name: "+getLastName()+
+               "<br>"
+               +"Address: "+getAddress()+
+               "<br>"
+               +"City: "+getCity()+
+               "<br>"
+               +"Province: "+getProvince()+
+               "<br>"
+               +"Postal Code: "+getPostalCode()+
+               "</html>";
+
+       JOptionPane.showMessageDialog(null,message);
+
+
    }
 
 }
