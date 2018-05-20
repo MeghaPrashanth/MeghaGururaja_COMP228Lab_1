@@ -9,6 +9,15 @@ public class BankAccount {
     String ownerName;
     Double balance;
 
+    public BankAccount (String accountNumber,String ownerName,Double balance)
+    {
+        this.accountNumber=accountNumber;
+        this.ownerName=ownerName;
+        if(balance>0.0)
+        {
+            this.balance=balance;
+        }
+    }
     public String getAccountNumber() {
         return accountNumber;
     }
