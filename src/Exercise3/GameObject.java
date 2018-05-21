@@ -1,42 +1,69 @@
 package Exercise3;
 
+import javax.swing.*;
+
 public class GameObject {
 
-    class Point {
-
-        private int x;
-        private int y;
-
-        public Point() {
-            x = y = 0;
-        }
-
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
-
-    Point center;
-    float velocity;
+    int x,y;
+    Double velocity;
     Boolean state;
-    float rotation;
-    
-    public Point getCenter() {
-        return center;
+    Double rotation;
+    String alive;
+    String dead;
+
+    public GameObject(int a, int b)
+    {
+        setPoint(a,b);
+    }
+    public void setPoint(int a, int b)
+    {
+        x = a; y = b;
+    }
+    public int getX()
+    {
+        return x;
+    }
+    public int getY()
+    {
+        return y;
     }
 
-    public void setCenter(Point center) {
-        this.center = center;
+
+    public  GameObject()
+    {
+        setPoint(0,0);
+        velocity=0.0;
+        rotation=0.0;
+
+
     }
 
-    public float getVelocity() {
+
+    public String toString()
+    {
+        return "[" + x + ", "+ y + "]";
+    }
+
+    public Double getVelocity() {
         return velocity;
     }
 
-    public void setVelocity(float velocity) {
+    public void setVelocity(Double velocity) {
         this.velocity = velocity;
+    }
+
+    public String booleanString()
+    {
+        if(state == true)
+        {
+            return ("Alive");
+
+        }
+        else
+        {
+            return  ("Dead");
+        }
+
     }
 
     public Boolean getState() {
@@ -44,17 +71,33 @@ public class GameObject {
     }
 
     public void setState(Boolean state) {
-        this.state = state;
+
+      this.state=state;
+
     }
 
-    public float getRotation() {
+    public Double getRotation() {
         return rotation;
     }
 
-    public void setRotation(float rotation) {
+    public void setRotation(Double rotation) {
         this.rotation = rotation;
     }
 
+    public void getGameObjectInfo()
+    {
+        String message = "<html> Hi "  + "<br>"
+                +"The centre is :" + toString()
+                + "<br>"
+                +"The velocity is :" + getVelocity()
+                + "<br>" +
+                "The object is :" + booleanString()
+                + "<br>"
+                +"The rotation is :" + getRotation()
+                + "<br>"
+                ;
+        JOptionPane.showMessageDialog(null,message);
+    }
 
 
 
