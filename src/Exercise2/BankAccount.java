@@ -9,6 +9,12 @@ public class BankAccount {
     String ownerName;
     Double balance;
 
+    public  BankAccount()
+    {
+        accountNumber=null;
+        ownerName=null;
+        balance=0.0;
+    }
     public BankAccount (String accountNumber,String ownerName,Double balance)
     {
         this.accountNumber=accountNumber;

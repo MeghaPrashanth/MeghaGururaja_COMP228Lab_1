@@ -6,9 +6,13 @@ import java.awt.*;
 public class AccountDriver {
     public static void main(String[] args) {
 
-        BankAccount account = new BankAccount("21345712","Samson Due",60000.00);
+        BankAccount account=new BankAccount();
+
+        BankAccount account1 = new BankAccount("21345712","Samson Due",60000.00);
 
         JOptionPane.showMessageDialog(null,"****** Welcome to Centennial Bank ******");
+        JOptionPane.showMessageDialog(null,"This is default existing account");
+        account1.getAccountInfo();
 
         String accountNumber= JOptionPane.showInputDialog("Enter Account Number ");
         account.setAccountNumber(accountNumber);
