@@ -4,21 +4,24 @@ import javax.swing.*;
 
 public class GameObject {
 
+    //Declaring variables
     int x,y;
     Double velocity;
     Boolean state;
     Double rotation;
-    String alive;
-    String dead;
 
+
+    //Constructor to set co-ordinates
     public GameObject(int a, int b)
     {
         setPoint(a,b);
     }
+    //Set co-ordinates
     public void setPoint(int a, int b)
     {
         x = a; y = b;
     }
+    //Getter and Setter methods
     public int getX()
     {
         return x;
@@ -28,6 +31,7 @@ public class GameObject {
         return y;
     }
 
+    //Default constructor
 
     public  GameObject()
     {
@@ -38,7 +42,15 @@ public class GameObject {
 
     }
 
+    public GameObject(int x,int y,Double velocity,Boolean state,Double rotation)
+    {
+        setPoint(x,y);
+        this.velocity=velocity;
+        this.rotation=rotation;
+        this.state=state;
+    }
 
+    //String method to display co-ordinates
     public String toString()
     {
         return "[" + x + ", "+ y + "]";
@@ -52,6 +64,7 @@ public class GameObject {
         this.velocity = velocity;
     }
 
+    //Displaying the state of object
     public String booleanString()
     {
         if(state == true)
@@ -84,6 +97,7 @@ public class GameObject {
         this.rotation = rotation;
     }
 
+    //Displaying game object info
     public void getGameObjectInfo()
     {
         String message = "<html> Hi "  + "<br>"
