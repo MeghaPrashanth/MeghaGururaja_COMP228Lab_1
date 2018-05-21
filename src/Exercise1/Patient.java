@@ -4,6 +4,8 @@ import javax.swing.*;
 
 public class Patient {
 
+    //Variables of Patient class
+
     private  String firstName;
     private  String lastName;
     private String address;
@@ -12,6 +14,13 @@ public class Patient {
     private  String postalCode;
     private String patientId;
 
+    //default constructor
+    public Patient ()
+    {
+
+    }
+
+    //Getter and Setter Methods
     public String getPatientId() {
         return patientId;
     }
@@ -67,6 +76,8 @@ public class Patient {
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+    //Constructor to initialize variables
    public Patient(String patientId,String firstName,String lastName,String address,String city,String province,String postalCode)
    {
        this.patientId=patientId;
@@ -77,6 +88,8 @@ public class Patient {
        this.province=province;
        this.postalCode=postalCode;
    }
+
+   //Method to display patient information
 
    public void  getPatientInfo()
    {
